@@ -1,0 +1,12 @@
+services:
+  mokksy-mock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mokksy-mock-openai
+    network_mode: "host"
+    environment:
+      - PORT=8080
+      - VERBOSE=true
+    restart: unless-stopped
+

@@ -2,9 +2,12 @@ import dev.mokksy.aimocks.openai.MockOpenai
 import kotlin.time.Duration.Companion.milliseconds
 
 fun main() {
+    val port = System.getenv("PORT")?.toIntOrNull() ?: 8080
+    val verbose = System.getenv("VERBOSE")?.toBoolean() ?: true
+
     val mockOpenai = MockOpenai(
-        port = 8080,
-        verbose = true
+        port = port,
+        verbose = verbose
     )
 
     mockOpenai.completion {
