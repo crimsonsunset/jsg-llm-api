@@ -1,9 +1,9 @@
 services:
-  mokksy-mock:
+  jsg-llm-api:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: mokksy-mock-openai
+    container_name: jsg-llm-api
     network_mode: "host"
     environment:
       - PORT=8080

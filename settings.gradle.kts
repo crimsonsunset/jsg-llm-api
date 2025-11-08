@@ -1,2 +1,2 @@
-rootProject.name = "mok-test"
+rootProject.name = "jsg-llm-api"
 
